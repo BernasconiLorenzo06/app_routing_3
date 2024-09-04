@@ -11,4 +11,11 @@ export class OpenfoodService {
     let obsFood = this.http.get(url);
     console.log(obsFood)
     return obsFood;}
+
+    searchProduct(id: string) {
+      const url = `https://world.openfoodfacts.org/api/v0/product/${id}`;
+      let obsProduct = this.http.get(url);
+      console.log(obsProduct);
+      return obsProduct;
+}
 }
