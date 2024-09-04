@@ -1,1 +1,12 @@
-{{results | json}}
+<h2>Product characteristics</h2>
+<div class="row">
+    <div class="col-6">
+        <div><b>Name:</b> {{results.product.product_name}}</div>
+
+        <div><b>Brands:</b> {{results.product.brands}}</div>
+
+        <div><b>Categories:</b> {{results.product.categories}}</div>
+    </div>
+    <div class="col-12 col-lg-6 float-end"><img src="{{results.product.image_url}}"></div>
+
+</div>
