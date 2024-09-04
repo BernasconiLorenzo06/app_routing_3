@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute,Router, ParamMap } from '@angular/router';
 import { OpenfoodService } from '../openfood.service';
-
+import {Location} from '@angular/common'
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
@@ -12,10 +12,12 @@ export class ItemComponent {
   routeObs !: Observable<ParamMap>; 
   obsProduct !: Observable<Object>;
   results: any;
+  
 
   constructor(
     public cercacibo: OpenfoodService,
     private route: ActivatedRoute,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -34,7 +36,10 @@ export class ItemComponent {
     }
 
     back() : void
-    {
+  {
+    this.location.back();
+  }
+    
 
-    }
+    
 }
