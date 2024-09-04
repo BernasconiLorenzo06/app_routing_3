@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/search', pathMatch: 'full' },
+  { path: '',   redirectTo: 'search', pathMatch: 'full' },
   { path: 'search', component: SearchComponent },
-  { path: 'item'}
+  //{ path: 'item'}
 ];
 
 @NgModule({
